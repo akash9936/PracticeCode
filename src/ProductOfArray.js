@@ -25,7 +25,7 @@ function main(s) {
         temp[i] = 1;
         // console.log(`temp is 2 ${temp}`)
         finallArray.push(...temp);
-        // console.log(`temp is 3 ${temp}`)
+         console.log(`temp is 3 ${finallArray}`)
     }
 
     let k = 0;
