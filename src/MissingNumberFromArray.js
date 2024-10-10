@@ -6,7 +6,7 @@
 
 
 
-let input = [1, 2, 4, 6, 3, 5, 8];
+
 
 // 1: []
 //1st for loop from 1 to N
@@ -66,6 +66,35 @@ function mainOne(data) {
     return result;
 }
 
-let finalResult = main(input);
+//check next value is next int or not
+let input = [1, 2, 4, 7, 6, 5, 8];
+
+function mainTwo(data){
+    let dataLength=data.length;
+    data=data.sort((a,b)=>a-b);
+    let missingNumber=[];
+    for(let i=0;i<dataLength-1;i++){
+        if(data[i]!==data[i+1]-1){
+            missingNumber.push(data[i]+1);
+        }
+    }
+    return missingNumber;
+}
+
+//less complex
+function mainThree(data){
+    let dataLength= data.length+1;
+    let expectedSum=(dataLength*(dataLength+1))/2;
+    let actualSum=0;
+    let result;
+    for(let i=0;i<dataLength-1;i++){
+        console.log(`Final Result actualSum ${actualSum}`);
+        actualSum=actualSum+data[i];
+    }
+    result= expectedSum-actualSum;
+    return result;
+}
+
+let finalResult = mainThree(input);
 
 console.log(`Final Result is ${finalResult}`);

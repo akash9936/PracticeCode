@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/TwoPointer/ClosestPair.js"
+    "start": "node ./src/TwoPointer/ContainerWithMostWater.js"
   },
   "author": "",
   "license": "ISC",
